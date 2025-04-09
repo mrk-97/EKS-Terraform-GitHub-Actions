@@ -1,5 +1,5 @@
 terraform {
-  required_version = "~> 1.9.3"
+  required_version = "1.11.3"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -10,7 +10,7 @@ terraform {
     bucket         = "my-eks-bucket-terraform-remote-state"
     region         = "us-east-1"
     key            = "eks/terraform.tfstate"
-    dynamodb_table = "dynamodb-state-lock"
+    dynamodb_table = "dynamodb-state-lock-for-eks"
     encrypt        = true
   }
 }
